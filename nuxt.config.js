@@ -11,13 +11,6 @@ module.exports = {
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      { src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', defer: true },
-      {
-        innerHTML: '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-6140044473305282", enable_page_level_ads: true })',
-        type: 'text/javascript'
-      }
     ]
   },
   /*
@@ -40,9 +33,19 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': false
+      }
     }
   },
   modules: [
+    [
+      '@nuxtjs/google-adsense', {
+        id: 'ca-pub-6140044473305282'
+      }
+    ],
     '@nuxtjs/bulma'
   ]
 }

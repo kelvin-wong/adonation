@@ -17,12 +17,15 @@
         <div id="navMenu" class="navbar-menu navbar-end">
           <nuxt-link
             to="/"
-            class="navbar-item">
+            class="navbar-item"
+            active-class="is-active"
+            exact>
             Home
           </nuxt-link>
           <nuxt-link
             to="/blog"
-            class="navbar-item">
+            class="navbar-item"
+            active-class="is-active">
             Blog
           </nuxt-link>
         </div>
@@ -54,3 +57,10 @@ export default {
 }
 </script>
 
+<style>
+.navbar-brand .navbar-item {
+  color: #EA001E;
+  font-size: 2rem;
+  font-weight: bold;
+}
+</style>
