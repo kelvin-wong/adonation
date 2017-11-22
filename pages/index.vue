@@ -17,11 +17,28 @@
         The idea of this site is simple. You can make a donation contribution through clicking/viewing an advertisement. Every month, I will donate all the revenue from the ads to a non-profit organization. Alos, all the revenue report will be posted in this blog. Later, I will try to group the advertisements into different categories. You can choose your advertisements by your will!
       </p>
     </section>
+    <section class="container admitad">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <strong>Travel</strong>
+          <admitad category="travel"></admitad>
+        </div>
+        <div class="column has-text-centered">
+          <strong>Online Shop</strong>
+          <admitad category="onlineShop"></admitad>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import Admitad from '~/components/admitad.vue'
+
 export default {
+  components: {
+    Admitad
+  }
 }
 </script>
 
@@ -37,5 +54,8 @@ export default {
 }
 .hero .subtitle {
   font-size: 1.5rem;
+}
+.admitad {
+  padding: 20px 0;
 }
 </style>
